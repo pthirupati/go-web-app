@@ -1,0 +1,13 @@
+# Service manifest for the go-web-app
+apiVersion: v1
+kind: Service
+metadata:
+  name: go-web-app-service
+  namespace: go-web-app
+spec:
+  selector:
+    app: go-web-app
+  ports:
+  - protocol: TCP
+    port: 80
+    targetPort: 8080
