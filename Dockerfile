@@ -3,7 +3,7 @@
 # and run the container
 
 # Start with a base image
-FROM golang:1.25 as base
+FROM golang:1.21 as base
 
 # Set the working directory inside the container
 WORKDIR /app
@@ -36,4 +36,3 @@ EXPOSE 8080
 
 # Command to run the application
 CMD ["./main"]
-

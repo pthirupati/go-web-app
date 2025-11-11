@@ -1,13 +1,15 @@
-# Service manifest for the go-web-app
+# Service for the application
 apiVersion: v1
 kind: Service
 metadata:
-  name: go-web-app-service
-  namespace: go-web-app
+  name: go-web-app
+  labels:
+    app: go-web-app
 spec:
+  ports:
+  - port: 80
+    targetPort: 8080
+    protocol: TCP
   selector:
     app: go-web-app
-  ports:
-  - protocol: TCP
-    port: 80
-    targetPort: 8080
+  type: ClusterIP

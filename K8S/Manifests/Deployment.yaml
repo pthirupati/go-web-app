@@ -5,7 +5,6 @@ metadata:
   name: go-web-app
   labels:
     app: go-web-app
-  namespace: go-web-app
 spec:
   replicas: 1
   selector:
@@ -21,5 +20,3 @@ spec:
         image: pongulurithirupathi/go-web-app
         ports:
         - containerPort: 8080
-
-        
